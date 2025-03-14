@@ -70,8 +70,8 @@
                 <h2 class="text-center font-bold text-lg mb-4">Lorem ipsum dolor</h2>
                 <div class="grid gap-4">
                         <div>
-                            <label class="block text-gray-700 text-sm font-semibold mb-1">Lorem ipsum dolor</label>
-                            <input type="text" class="w-full p-2 border rounded bg-gray-200 text-gray-700" placeholder="Lorem ipsum dolor">
+                            <label class="block text-gray-700 text-sm font-semibold mb-1">Name</label>
+                            <input type="text" class="w-full p-2 border rounded bg-gray-200 text-gray-700" placeholder="Your Name">
                         </div>
                         <div>
                             <label class="block text-gray-700 text-sm font-semibold mb-1">Lorem ipsum dolor</label>
