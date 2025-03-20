@@ -1,46 +1,30 @@
-<header class="flex items-center justify-between p-4 bg-white shadow-md">
-    <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-gray-300 rounded"></div>
-        <h1 class="text-2xl font-bold text-blue-500 hover:text-blue-700 transition">Title Company</h1>
-    </div>
-
-    <!-- Tombol Login -->
-    <a href="{{ url('/login') }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
-        Login
-    </a>
-</header>
-
 <x-app>
-        <!-- Main Content -->
-        <main class="p-6 max-w-6xl mx-auto">
-            <div class="grid gap-6 lg:grid-cols-3">
-                
-                <!-- Large Box -->
-                <div class="bg-white shadow-lg rounded-lg p-6 lg:col-span-2">
-                    <div class="relative">
-                        <div class="w-full h-64 bg-gray-300 rounded flex items-center justify-center">
-                            <p class="text-gray-500">Gambar Utama</p>
-                        </div>
-                        <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full">◀</button>
-                        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full">▶</button>
-                    </div>
-                    <p class="mt-4 text-sm text-gray-700">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel fugiat reprehenderit tempore sit.
-                    </p>
-                </div>
+    <x-navigation></x-navigation>    
     
-                <!-- QR -->
-                <div class="bg-white shadow-lg rounded-lg p-6">
-                    <div class="w-full h-40 bg-gray-300 rounded flex items-center justify-center">
-                        <p class="text-gray-500">Gambar Kecil</p>
+    <!-- Main Content -->
+    <main class="p-6 max-w-6xl mx-auto">
+        <div class="grid gap-6 lg:grid-cols-3">
+            
+            <!-- Large Box -->
+            <div class="bg-white shadow-lg rounded-lg p-6 lg:col-span-2">
+                <div class="relative">
+                    <div id="slideshow" class="w-full h-64 bg-gray-300 rounded flex items-center justify-center">
+                        <img id="slide-image" src="default.jpg" alt="Gambar Utama" class="w-full h-64 object-cover rounded">
                     </div>
-                    <p class="mt-4 text-sm text-gray-700">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio laboriosam quibusdam cumque.
-                    </p>
+                    <button onclick="prevSlide()" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full">◀</button>
+                    <button onclick="nextSlide()" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full">▶</button>
                 </div>
+                <textarea id="slide-caption" class="mt-4 text-sm text-gray-700 w-full border rounded p-2">Lorem ipsum dolor sit amet...</textarea>
             </div>
-    
-             <!-- Form Section -->
+
+            <!-- QR -->
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <input type="file" id="qr-image" class="w-full mb-2">
+                <textarea id="qr-text" class="mt-4 text-sm text-gray-700 w-full border rounded p-2">Lorem ipsum dolor sit amet...</textarea>
+            </div>
+        </div>
+
+        <!-- Form Section -->
         <div class="mt-8 p-6 bg-white shadow-lg rounded-lg">
             <h2 class="text-center font-bold text-lg mb-4">Data Tamu</h2>
             <div class="grid gap-4">
@@ -91,13 +75,10 @@
         </div>
     </main>
 
+    <!-- Footer -->
+       <footer class="py-6 text-center text-sm text-gray-500">
+        Perusahaan &copy; {{ date('Y') }}
+    </footer>
+
     
-        <!-- Footer -->
-        <footer class="py-6 text-center text-sm text-gray-500">
-            Perusahaan &copy; {{ date('Y') }}
-        </footer>
-    
-    </body>
 </x-app>
-    
-                        
