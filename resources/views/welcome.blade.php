@@ -54,7 +54,7 @@
                     </p>
                 </div>
     
-                <!-- Small Box -->
+                <!-- QR -->
                 <div class="bg-white shadow-lg rounded-lg p-6">
                     <div class="w-full h-40 bg-gray-300 rounded flex items-center justify-center">
                         <p class="text-gray-500">Gambar Kecil</p>
